@@ -29,9 +29,21 @@ public class Task03 extends StandardInputTask {
      * @return null/'RED'/'ORANGE'/'YELLOW'/'GREEN'
      */
     static String getColorHealthPoint(int currentHealthPoint, int maxHealthPoint) {
+        String color = new String();
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        if (currentHealthPoint / maxHealthPoint <= 0 || currentHealthPoint / maxHealthPoint > 1) {
+            color = null;
+        } else if (currentHealthPoint / maxHealthPoint > 0 & currentHealthPoint / maxHealthPoint < 0.25) {
+            color = "RED";
+        } else if (currentHealthPoint / maxHealthPoint >= 0.25 & currentHealthPoint / maxHealthPoint < 0.5) {
+            color = "ORANGE";
+        } else if (currentHealthPoint / maxHealthPoint >= 0.5 & currentHealthPoint / maxHealthPoint < 0.75) {
+            color = "YELLOW";
+        } else if (currentHealthPoint / maxHealthPoint >= 0.75 & currentHealthPoint / maxHealthPoint <= 1.00) {
+            color = "GREEN";
+        }
+        return color;
     }
 }
