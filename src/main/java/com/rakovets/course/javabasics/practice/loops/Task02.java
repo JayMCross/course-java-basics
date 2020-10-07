@@ -25,5 +25,23 @@ public class Task02 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        if (headerRowEnable == true) {
+            strNumTrue(rows);
+        } else if (headerRowEnable == false) {
+            strNumFalse(rows);
+        }
     }
+
+    private static void strNumTrue(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            System.out.print("\n" + i);
+        }
+    }
+
+    private static void strNumFalse(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            System.out.print(i+"\n");
+        }
+    }
+
 }

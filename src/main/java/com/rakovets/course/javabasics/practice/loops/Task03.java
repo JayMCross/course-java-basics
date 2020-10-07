@@ -26,5 +26,11 @@ public class Task03 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        for (int i = 0; i < depositTerm; i++) {
+            depositAmount = depositAmount + depositAmount * 0.01 * annualDepositPercent;
+        }
+        int result = (int) Math.round(depositAmount * 100);
+        double result2 = (double) result / 100;
+        System.out.println(result2);
     }
 }
