@@ -25,12 +25,8 @@ public class Task09 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        int floors ;
-        int porch ;
-        int floor ;
-        floors = numberApartmentsPerFloor / (apartmentNumber - (apartmentNumber % numberApartmentsPerFloor))+1;
-        porch = (floors - (floors % numberFloors)) / numberFloors + 1;
-        floor = floors - porch * numberApartmentsPerFloor;
-        System.out.println("Porch: " + porch + ". Floor: " + floor);
+        int porch = (apartmentNumber - 1) / (numberFloors * numberApartmentsPerFloor) + 1;
+        int floor = ((apartmentNumber - 1) % (numberFloors * numberApartmentsPerFloor)) / numberApartmentsPerFloor + 1;
+        System.out.println("Porch: " + porch + "." + " Floor: " + floor);
     }
 }
