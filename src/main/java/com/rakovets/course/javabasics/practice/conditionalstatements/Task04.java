@@ -18,6 +18,7 @@ public class Task04 {
         Scanner scanner = new Scanner(System.in);
         int weekdayNumber = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
         getNameWeekday(weekdayNumber);
+        System.out.println(getNameWeekday(weekdayNumber));
     }
     private static String getNameWeekday(int weekdayNumber) {
         String dayNumToTxt = new String();
