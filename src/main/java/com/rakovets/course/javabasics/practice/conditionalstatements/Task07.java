@@ -25,5 +25,14 @@ public class Task07 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        String ifLeap = new String();
+        if (year % 4 == 0 & year % 100 == 0){
+            ifLeap = "not a leap year";
+        }else if(year%4!=0){
+            ifLeap = "not a leap year";
+        }else if(year%4==0&year%100!=0){
+            ifLeap = "leap year";
+        }
+        System.out.println(ifLeap);
     }
 }
