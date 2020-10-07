@@ -19,9 +19,14 @@ public class Task01 {
         // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
         int positionPlayerByDamage = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
+        ifTop5(positionPlayerByDamage);
+    }
 
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+    private static void ifTop5(int positionPlayerByDamage) {
+        if (positionPlayerByDamage >= 1 & positionPlayerByDamage <= 5) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
     }
 }
