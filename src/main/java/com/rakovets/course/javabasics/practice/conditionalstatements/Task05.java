@@ -20,35 +20,36 @@ public class Task05 {
         Scanner scanner = new Scanner(System.in);
         int monthNumber = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
         getNameMonth(monthNumber);
+        System.out.println(getNameMonth(monthNumber));
     }
     public static String getNameMonth(int monthNumber) {
         String monthNumToTxt = new String();
         if(monthNumber<1||monthNumber>12) {
             monthNumToTxt = null;
         }else if (monthNumber == 1){
-            monthNumToTxt = "january";
+            monthNumToTxt = "JANUARY";
         }else if (monthNumber == 2){
-            monthNumToTxt = "february";
+            monthNumToTxt = "FEBRUARY";
         }else if (monthNumber == 3){
-            monthNumToTxt = "march";
+            monthNumToTxt = "MARCH";
         }else if(monthNumber == 4){
-            monthNumToTxt = "april";
+            monthNumToTxt = "APRIL";
         }else if(monthNumber == 5){
-            monthNumToTxt = "may";
+            monthNumToTxt = "MAY";
         }else if(monthNumber == 6){
-            monthNumToTxt = "june";
+            monthNumToTxt = "JUNE";
         }else if(monthNumber == 7){
-            monthNumToTxt = "july";
+            monthNumToTxt = "JULY";
         }else if(monthNumber == 8){
-            monthNumToTxt = "august";
+            monthNumToTxt = "AUGUST";
         }else if(monthNumber == 9){
-            monthNumToTxt = "september";
+            monthNumToTxt = "SEPTEMBER";
         }else if(monthNumber == 10){
-            monthNumToTxt = "october";
+            monthNumToTxt = "OCTOBER";
         }else if(monthNumber == 11){
-            monthNumToTxt = "november";
+            monthNumToTxt = "NOVEMBER";
         }else if(monthNumber == 12){
-            monthNumToTxt = "december";
+            monthNumToTxt = "DECEMBER";
         }
         return monthNumToTxt;
     }
