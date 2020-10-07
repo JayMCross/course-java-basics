@@ -18,9 +18,22 @@ public class Task02 {
         // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
         int hour = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
+        getGreetingByHour(hour);
+    }
 
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+    private static String getGreetingByHour(int hour) {
+        String greeting = new String();
+        if (hour < 0 || hour > 23) {
+            greeting = null;
+        } else if (hour >= 0 & hour < 6) {
+            greeting = "Good night";
+        } else if (hour >= 6 & hour < 12) {
+            greeting = "Good morning";
+        } else if (hour >= 12 & hour < 18) {
+            greeting = "Good day";
+        } else if (hour >= 18 & hour <= 23) {
+            greeting = "Good evening";
+        }
+        return greeting;
     }
 }
