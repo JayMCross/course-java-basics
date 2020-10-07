@@ -29,5 +29,19 @@ public class Task06 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        int firstPlayerScore = 0;
+        int secondPlayerScore = 0;
+        if (tanksKilledFirstPlayer == tanksKilledSecondPlayer) {
+            firstPlayerScore = tanksKilledFirstPlayer * 100;
+            secondPlayerScore = tanksKilledSecondPlayer * 100;
+        } else if (tanksKilledFirstPlayer > tanksKilledSecondPlayer) {
+            firstPlayerScore = (tanksKilledFirstPlayer + 5) * 100;
+            secondPlayerScore = tanksKilledSecondPlayer * 100;
+        } else if (tanksKilledSecondPlayer > tanksKilledFirstPlayer) {
+            firstPlayerScore = tanksKilledFirstPlayer * 100;
+            secondPlayerScore = (tanksKilledSecondPlayer + 5) * 100;
+        }
+        System.out.println("Player 1: " + firstPlayerScore +". " + "Player 2: " + secondPlayerScore);
+
     }
 }
