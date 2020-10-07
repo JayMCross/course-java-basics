@@ -19,6 +19,7 @@ public class Task02 {
         Scanner scanner = new Scanner(System.in);
         int hour = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
         getGreetingByHour(hour);
+        System.out.println(getGreetingByHour(hour));
     }
 
     private static String getGreetingByHour(int hour) {
