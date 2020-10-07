@@ -24,6 +24,24 @@ public class Task04 extends StandardInputTask {
      * @return день недели на английском языке (UPPER CASE)
      */
     static String getNameWeekday(byte weekdayNumber) {
-        return null;
+        String dayNumToTxt = new String();
+        if(weekdayNumber<1||weekdayNumber>7) {
+            dayNumToTxt = null;
+        }else if(weekdayNumber==1){
+            dayNumToTxt = "MONDAY";
+        }else if(weekdayNumber==2){
+            dayNumToTxt = "TUESDAY";
+        }else if(weekdayNumber==3){
+            dayNumToTxt = "WEDNESDAY";
+        }else if(weekdayNumber==4){
+            dayNumToTxt = "THURSDAY";
+        }else if(weekdayNumber==5){
+            dayNumToTxt = "FRIDAY";
+        }else if(weekdayNumber==6){
+            dayNumToTxt = "SATURDAY";
+        }else if(weekdayNumber==7){
+            dayNumToTxt = "SUNDAY";
+        }
+        return dayNumToTxt;
     }
 }
