@@ -19,9 +19,37 @@ public class Task05 {
         // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
         int monthNumber = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        getNameMonth(monthNumber);
+    }
+    public static String getNameMonth(int monthNumber) {
+        String monthNumToTxt = new String();
+        if(monthNumber<1||monthNumber>12) {
+            monthNumToTxt = null;
+        }else if (monthNumber == 1){
+            monthNumToTxt = "january";
+        }else if (monthNumber == 2){
+            monthNumToTxt = "february";
+        }else if (monthNumber == 3){
+            monthNumToTxt = "march";
+        }else if(monthNumber == 4){
+            monthNumToTxt = "april";
+        }else if(monthNumber == 5){
+            monthNumToTxt = "may";
+        }else if(monthNumber == 6){
+            monthNumToTxt = "june";
+        }else if(monthNumber == 7){
+            monthNumToTxt = "july";
+        }else if(monthNumber == 8){
+            monthNumToTxt = "august";
+        }else if(monthNumber == 9){
+            monthNumToTxt = "september";
+        }else if(monthNumber == 10){
+            monthNumToTxt = "october";
+        }else if(monthNumber == 11){
+            monthNumToTxt = "november";
+        }else if(monthNumber == 12){
+            monthNumToTxt = "december";
+        }
+        return monthNumToTxt;
     }
 }
