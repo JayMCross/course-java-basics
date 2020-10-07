@@ -25,6 +25,33 @@ public class Task05 extends StandardInputTask {
      * @return месяц на английском языке (UPPER CASE)
      */
     static String getNameMonth(byte monthNumber) {
-        return null;
-    }
+        String monthNumToTxt = new String();
+        if(monthNumber<1||monthNumber>12) {
+            monthNumToTxt = null;
+        }else if (monthNumber == 1){
+            monthNumToTxt = "JANUARY";
+        }else if (monthNumber == 2){
+            monthNumToTxt = "FEBRUARY";
+        }else if (monthNumber == 3){
+            monthNumToTxt = "MARCH";
+        }else if(monthNumber == 4){
+            monthNumToTxt = "APRIL";
+        }else if(monthNumber == 5){
+            monthNumToTxt = "MAY";
+        }else if(monthNumber == 6){
+            monthNumToTxt = "JUNE";
+        }else if(monthNumber == 7){
+            monthNumToTxt = "JULY";
+        }else if(monthNumber == 8){
+            monthNumToTxt = "AUGUST";
+        }else if(monthNumber == 9){
+            monthNumToTxt = "SEPTEMBER";
+        }else if(monthNumber == 10){
+            monthNumToTxt = "OCTOBER";
+        }else if(monthNumber == 11){
+            monthNumToTxt = "NOVEMBER";
+        }else if(monthNumber == 12){
+            monthNumToTxt = "DECEMBER";
+        }
+        return monthNumToTxt;    }
 }
