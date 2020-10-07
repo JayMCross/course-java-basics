@@ -19,7 +19,19 @@ public class Task03 {
         // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
         int healthPointPercentage = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
-        getColorHealthPoint(healthPointPercentage);
+        String color = new String();
+        if (healthPointPercentage < 0 || healthPointPercentage > 100) {
+            color = null;
+        } else if (healthPointPercentage >= 0 & healthPointPercentage < 25) {
+            color = "RED";
+        } else if (healthPointPercentage >= 25 & healthPointPercentage < 50) {
+            color = "ORANGE";
+        } else if (healthPointPercentage >= 50 & healthPointPercentage < 75) {
+            color = "YELLOW";
+        } else if (healthPointPercentage >= 75 & healthPointPercentage <= 100) {
+            color = "GREEN";
+        }
+        System.out.println(color);
     }
 
     private static String getColorHealthPoint(int healthPointPercentage) {
