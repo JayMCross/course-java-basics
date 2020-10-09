@@ -26,5 +26,16 @@ public class Task07 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        double distance = startDistance;
+        double result = 0;
+        if (distance == 0) {
+            result = 0;
+        } else if(distance != 0) {
+            for (result = 0 ; distance < finishDistance; ) {
+                result += distance;
+                distance = distance + dailyProgress * distance / 100.0;
+            }
+        }
+        System.out.println(String.format("%.2f", result));
     }
 }
