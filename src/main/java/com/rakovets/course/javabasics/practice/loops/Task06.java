@@ -23,5 +23,28 @@ public class Task06 {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+
+        String amountB = new String();
+        if (amount < 0) {
+            for (int i = 1; amount < 0; i++) {
+                amountB = (-amount % 10) + amountB;
+                amount /= 10;
+                if (i % 3 == 0 && amount != 0) {
+                    amountB = " " + amountB;
+                }
+            }
+            System.out.println("-" + amountB);
+        } else if (amount >= 0) {
+            for (int i = 1; amount > 0;i++ ) {
+                amountB = amount % 10 + amountB;
+                amount /= 10;
+                if (i % 3 == 0 && amount != 0) {
+                    amountB = " " + amountB;
+                }
+            }
+            System.out.println(amountB);
+        }
+
+
     }
 }
