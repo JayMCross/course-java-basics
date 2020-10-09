@@ -33,15 +33,18 @@ public class Task02 {
     }
 
     private static void strNumTrue(int rows) {
-        for (int i = 1; i <= rows; i++) {
-            System.out.print("\n" + i);
+        System.out.printf("\n");
+
+        for (int i = 1; i < rows; i++) {
+            System.out.print(i + "\n");
         }
     }
 
     private static void strNumFalse(int rows) {
         for (int i = 1; i <= rows; i++) {
-            System.out.print(i+"\n");
+            System.out.print(i + "\n");
         }
     }
+
 
 }
