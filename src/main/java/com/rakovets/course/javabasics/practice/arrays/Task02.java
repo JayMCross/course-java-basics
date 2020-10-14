@@ -2,6 +2,8 @@ package com.rakovets.course.javabasics.practice.arrays;
 
 import com.rakovets.course.javabasics.util.StandardInputTask;
 
+import java.text.DecimalFormat;
+
 /**
  * Разработать программу для электронного дневника:
  * которая работает с отметками по всем предметам.
@@ -42,7 +44,9 @@ public class Task02 extends StandardInputTask {
                 avg = sum / col;
             }
         }
-        return avg;
+        DecimalFormat newFormat = new DecimalFormat("#.##");
+        double avgR =  Double.valueOf(newFormat.format(avg));
+        return avgR;
     }
 
     /**
