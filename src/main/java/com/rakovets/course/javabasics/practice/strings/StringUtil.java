@@ -2,46 +2,87 @@ package com.rakovets.course.javabasics.practice.strings;
 
 public class StringUtil {
     public static void main(String[] args) {
-        System.out.println(getConcat());
-        System.out.println(getequals(String string));
+
     }
-    String getConcat() { // таск 1 конкатенация/ join(объединение) +
-     String str1 = "Hello";
-     String str2 = "Dmitry Rakovets";
-     String str3 = String.join(" ", str1, str2);
-     System.out.println(str3);
- }
-    void index() { // таск 2 поиск быквы +
-     String foundx = "this sentense include x";
-     int index = foundx.indexOf('x');
-     System.out.println("Индекс данной буквы: " + index);
+
+    public String stringAddition(String str1, String str2) {
+        String str3 = str1.concat(str2);
+        return str3;
     }
-     String getequals() { // таск 3 сравнение двух строк equals(без учета регистра) +
-        String str1 = "ORDINARY WORD";
-        String str2 = "ordinary word";
-        System.out.println(str1.equals(str2));
+
+    public int stringIndex(String str, String symbol) {
+        return str.indexOf(symbol);
     }
-    void trim() { // таск 4 trim и UpperCase +
-        String str = " Java Basic ";
-        str = str.trim();
-        System.out.println(str.toUpperCase());
+
+    public boolean ifEqual(String str1, String str2) {
+        return str1.equals(str2);
     }
-    void getChars() { // таск 5 +
-        String str = "два фламинго стоят на тонких ногах";
-        int start = 10;
-        int end = 32;
-        char[] dst = new char[end - start];
-        str.getChars(start, end, dst, 0);
-        System.out.println(dst);
+
+    public String trimmedUpper(String str) {
+        return str.trim().toUpperCase();
     }
-    void replace() { // таск 6 замена +
-        String str = "Listen joy division - it is :( :( :(";
-        String replStr1 = str.replace(":(", ":)");
-        System.out.println(replStr1);
+
+    public String substringFrom10(String str) {
+        if (str.length() < 10) {
+            return "the string does not have enough characters";
+        }
+        String str2 = str.substring(10);
+        if (str2.length() > 23) {
+            str2 = str2.substring(0, 23);
+        }
+        return str2;
+    }
+
+    public String smileReplacement(String str) {
+        return str.replace(":(", ":)");
+    }
+
+    public boolean ifFirstAndFinal(String str, String word) {
+        if (str.startsWith(word) && str.endsWith(word)) {
+            return true;
+        }
+        return false;
     }
 
 
+    public String ifPalindrome(String str) {
+        String response = new String();
+        StringBuilder strRev = new StringBuilder();
+        strRev.append(str);
+        strRev = strRev.reverse();
+        if (str.equalsIgnoreCase(String.valueOf(strRev))) {
+            response = "is palindrome";
+        } else {
+            response = "not palindrome";
+        }
+        return response;
+    }
 
+    public String[] stringSplitting(String str, int devisor) {
+
+        int devisedPartsCol = str.length() / devisor;
+        if (str.length() % devisor != 0) {
+            devisedPartsCol++;
+        }
+        String[] splittedStrArr = new String[devisedPartsCol];
+        for (int i = 0; i < devisedPartsCol; i++) {
+            splittedStrArr[i] = str.substring(i * devisor, (i + 1) * devisor);
+        }
+        return splittedStrArr;
+    }
+
+    public int howManyWords(String str) {
+        int counter = 0;
+        if (str.length() != 0) {
+            counter++;
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) == ' ' && str.charAt(i + 1) != ' ') {
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
 }
 
 
