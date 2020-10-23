@@ -4,28 +4,28 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CatTest {
-    Cat standartCat = new Cat("standartCatName");
+    Cat standardCat = new Cat("standardCatName");
     Person simpleCatLovingMan = new Person(50);
 
     @Test
     void catMewTest() {
-        Assertions.assertEquals("mew", standartCat.mew());
+        Assertions.assertEquals("mew", standardCat.mew());
     }
 
     @Test
     void catPurrTest() {
-        Assertions.assertEquals("purr", standartCat.purr());
+        Assertions.assertEquals("purr", standardCat.purr());
     }
 
     @Test
     void mewTest() {
-        standartCat.mew(simpleCatLovingMan);
+        standardCat.mew(simpleCatLovingMan);
         Assertions.assertEquals(49, simpleCatLovingMan.getHappiness());
     }
 
     @Test
     void purrTest() {
-        standartCat.purr(simpleCatLovingMan);
+        standardCat.purr(simpleCatLovingMan);
         Assertions.assertEquals(51, simpleCatLovingMan.getHappiness());
     }
 }
