@@ -80,7 +80,5 @@ public class Math {
 
         }
         return arr;
-
-
     }
 }
