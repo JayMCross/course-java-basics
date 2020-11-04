@@ -15,7 +15,7 @@ public class Task1 {
         }
 
         // String s set to a value and calling getLength()
-        s = "GeeksforGeeks";
+        s = "notNullString";
         try
         {
             System.out.println(getLength(s));
