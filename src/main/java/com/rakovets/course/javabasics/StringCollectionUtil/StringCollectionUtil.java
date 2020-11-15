@@ -1,31 +1,30 @@
 package com.rakovets.course.javabasics.StringCollectionUtil;
 
-import java.util.Iterator;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class StringCollectionUtil {
-    public static List<String> resetWordsByLength(LinkedList originClc, int wordSize) {
-        Iterator<String> iterator = originClc.iterator();
-        LinkedList<String> resultClc = new LinkedList<String>();
+    public static List resetWordsByLength(Collection<String> originClc, int wordSize) {
+        Collection<String> copyOfOriginClc = new LinkedList<>(originClc);
+        ListIterator<String> iterator = ((LinkedList<String>) copyOfOriginClc).listIterator();
         while (iterator.hasNext()) {
-            String temp = iterator.next();
-            if (temp.length() == wordSize) {
-                resultClc.add("*");
-            } else resultClc.add(temp);
-        }
-        return resultClc;
-    }
-
-    public static List<String> removeWordsByLength(LinkedList originClc, int wordSize) {
-        Iterator<String> iterator = originClc.iterator();
-        LinkedList<String> resultClc = new LinkedList<String>();
-        while (iterator.hasNext()) {
-            String temp = iterator.next();
-            if (temp.length() != wordSize) {
-                resultClc.add(temp);
+            if (iterator.next().length() == wordSize) {
+                iterator.set("*");
             }
         }
-        return resultClc;
+        return (List) copyOfOriginClc;
+    }
+
+    public static List removeWordsByLength(Collection<String> originClc, int wordSize) {
+        Collection<String> copyOfOriginClc = new LinkedList<>(originClc);
+        ListIterator<String> iterator = ((LinkedList<String>) copyOfOriginClc).listIterator();
+        while (iterator.hasNext()) {
+            if (iterator.next().length() == wordSize) {
+                iterator.remove();
+            }
+        }
+        return (List) copyOfOriginClc;
     }
 }
